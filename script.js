@@ -1,3 +1,8 @@
+const form = document.querySelector("form")
+const textarea = document.querySelector("textarea")
+
+textarea.focus()
+
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -6,10 +11,11 @@ const shuffle = (array) => {
   return array
 }
 
-document.querySelector("form").addEventListener("submit", (evt) => {
+form.addEventListener("submit", (evt) => {
+  evt.stopImmediatePropagation()
   evt.preventDefault()
 
-  const items = document.querySelector("textarea").value.replace(/(\r\n|\n|\r| )/gm, "")
+  const items = textarea.value.replace(/(\r\n|\n|\r| )/gm, "")
   const itemsShuffled = shuffle(items.split(','))
   const itemsPadded = [...itemsShuffled]
 
