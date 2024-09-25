@@ -18,8 +18,9 @@ document.querySelector("form").addEventListener("submit", (evt) => {
   let html = ""
 
   for (const [i, item] of itemsShuffled.entries()) {
-    html += `<li>${item} → ${itemsPadded[i + 1]}, ${itemsPadded[i + 2]}</li>`
+    html += `<li><strong>${item}</strong> → ${itemsPadded[i + 1]}, ${itemsPadded[i + 2]}</li>`
   }
 
-  document.querySelector("#output").innerHTML = html
+  document.querySelector("ul").innerHTML = html
+  document.querySelector("#output").hidden = false
 })

@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  background: #FFF8BE;
+  color: #00433F;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-block: 0;
+  margin-inline: auto;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  min-height: 100vh;
+  text-wrap: pretty;
+  width: min(100%, 70ch);
+}
+
+h1,
+h2 {
+  margin-block: 0 0.5em;
+  text-wrap: balance;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+textarea {
+  appearance: none;
+  background: white;
+  border-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  padding: 0.75rem;
+  vertical-align: middle;
+  width: 100%;
+}
+
+button {
+  background: #00433F;
+  border-radius: 0 0 0.75rem 0.75rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+textarea {
+  border: 2px solid #00433F;
+  border-radius: 0.75rem 0.75rem 0 0;
+  font-size: 1.5rem;
+  resize: none;
+}
+
+#output {
+  border: 2px dotted;
+  background: white;
+  border-radius: 0.75rem;
+  margin-block-start: 2rem;
+  padding: 2rem;
+}
