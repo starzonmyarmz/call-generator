@@ -1,3 +1,4 @@
+const loadButton = document.querySelector("#load")
 const form = document.querySelector("form")
 const textarea = document.querySelector("textarea")
 
@@ -19,6 +20,8 @@ form.addEventListener("submit", (evt) => {
   const itemsShuffled = shuffle(items.split(','))
   const itemsPadded = [...itemsShuffled]
 
+  localStorage.items = items
+
   itemsPadded.push(itemsShuffled[0], itemsShuffled[1])
 
   let html = ""
@@ -29,4 +32,12 @@ form.addEventListener("submit", (evt) => {
 
   document.querySelector("ul").innerHTML = html
   document.querySelector("#output").hidden = false
+})
+
+loadButton.addEventListener("click", () => {
+  textarea.value = localStorage.items
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadButton.hidden = !localStorage.items
 })

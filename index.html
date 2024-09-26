@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call Generator</title>
+    <title>Random Call Generator</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔀</text></svg>">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Call Generator</h1>
+    <header>
+      <h1>Random Call Generator</h1>
+      <button id="load" hidden>Load previous list</button>
+    </header>
     <form action="/">
-      <textarea rows="6" required></textarea>
-      <button>Randomize List</button>
+      <textarea id="items" rows="6" required></textarea>
+      <button id="randomize">Randomize List</button>
     </form>
     <div id="output" hidden>
       <h2>Calls to make</h2>
