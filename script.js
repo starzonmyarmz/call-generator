@@ -20,7 +20,7 @@ form.addEventListener("submit", (evt) => {
   const itemsShuffled = shuffle(items.split(','))
   const itemsPadded = [...itemsShuffled]
 
-  localStorage.items = items
+  localStorage.randomCallGenerator = items
 
   itemsPadded.push(itemsShuffled[0], itemsShuffled[1])
 
@@ -35,9 +35,9 @@ form.addEventListener("submit", (evt) => {
 })
 
 loadButton.addEventListener("click", () => {
-  textarea.value = localStorage.items
+  textarea.value = localStorage.randomCallGenerator
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadButton.hidden = !localStorage.items
+  loadButton.hidden = !localStorage.randomCallGenerator
 })
